@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#3395CA</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="second_button">#84B6B8</color>
+    <color name="not_approved">#C6E04C4C</color>
+    <color name="approved">#C667E04C</color>
+    <color name="android_default">#8a000000</color>
+
 </resources>
