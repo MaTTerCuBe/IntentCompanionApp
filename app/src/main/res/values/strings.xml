@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Intents Companion App</string>
+    
+    <string name="welcome_title">Intents Companion App</string>
+    <string name="welcome_description">This is the companion app to the intents assignment.  Hopefully you got here vie the assignment fragment.  Select which style you want to send back to the main app! it should take the place of the style of the button you pressed to get here.</string>
+    <string name="button_1">Style 1</string>
+    <string name="button_2">Style 2</string>
+    <string name="button_3">Style 3</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
