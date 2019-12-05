@@ -4,6 +4,7 @@ package com.mattercube.intentscompanionapp
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -49,6 +50,8 @@ class WelcomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        Log.i("Intent chaeck", "in Activity Created")
+
         // Assigning Buttons by finding their views
         style1 = view?.findViewById(R.id.button_style1)
         style2 = view?.findViewById(R.id.button_style2)
@@ -56,6 +59,8 @@ class WelcomeFragment : Fragment() {
 
         // Set the button on click listeners
         style1?.setOnClickListener {
+
+            Log.i("Intent check", "Button 1 pressed")
             prepReturnIntent(1)
             returnIntent()
         }
@@ -71,8 +76,11 @@ class WelcomeFragment : Fragment() {
 
     fun prepReturnIntent(style: Int) {
 
+        Log.i("Intent check", "in prep ReturnIntent.  style is: $style")
         if (style == 1) {
-            parcel = Intent().putExtra("com.mattercube.basicfragments.FONT_VALUE", 1)
+
+            Log.i("Intent check", "In if block, extra should be put inserted")
+            parcel = Intent().putExtra("FONT_VALUE", 1)
         }
 
         else if (style == 2) {
