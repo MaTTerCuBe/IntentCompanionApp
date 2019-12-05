@@ -1,6 +1,8 @@
 package com.mattercube.intentscompanionapp
 
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,7 +28,7 @@ class WelcomeFragment : Fragment() {
     private var style2: Button? = null
     private var style3: Button? = null
 
-    private var parcel = 0
+    private var parcel: Intent? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +56,8 @@ class WelcomeFragment : Fragment() {
 
         // Set the button on click listeners
         style1?.setOnClickListener {
-            // Toast here
+            prepReturnIntent(1)
+            returnIntent()
         }
 
         style2?.setOnClickListener {
@@ -64,5 +67,26 @@ class WelcomeFragment : Fragment() {
         style3?.setOnClickListener {
             // Toast here
         }
+    }
+
+    fun prepReturnIntent(style: Int) {
+
+        if (style == 1) {
+            parcel = Intent().putExtra("com.mattercube.basicfragments.FONT_VALUE", 1)
+        }
+
+        else if (style == 2) {
+            parcel = Intent().putExtra("com.mattercube.basicfragments.FONT_VALUE", 2)
+        }
+
+        else {
+            parcel = Intent().putExtra("com.mattercube.basicfragments.FONT_VALUE", 3)
+        }
+
+    }
+
+    fun returnIntent(){
+        this.activity?.setResult(Activity.RESULT_OK, parcel)
+        this.activity?.finish()
     }
 }
