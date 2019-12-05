@@ -66,11 +66,14 @@ class WelcomeFragment : Fragment() {
         }
 
         style2?.setOnClickListener {
-            // Toast here
+
+            prepReturnIntent(2)
+            returnIntent()
         }
 
         style3?.setOnClickListener {
-            // Toast here
+            prepReturnIntent(3)
+            returnIntent()
         }
     }
 
@@ -84,11 +87,11 @@ class WelcomeFragment : Fragment() {
         }
 
         else if (style == 2) {
-            parcel = Intent().putExtra("com.mattercube.basicfragments.FONT_VALUE", 2)
+            parcel = Intent().putExtra("FONT_VALUE", 2)
         }
 
         else {
-            parcel = Intent().putExtra("com.mattercube.basicfragments.FONT_VALUE", 3)
+            parcel = Intent().putExtra("FONT_VALUE", 3)
         }
 
     }
