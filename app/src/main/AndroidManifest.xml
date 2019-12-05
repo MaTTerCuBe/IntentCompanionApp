@@ -17,7 +17,7 @@
             </intent-filter>
 
             <intent-filter>
-                <action android:name="msud.cs3013.ACTION_RETRIEVE_FONT" />
+                <action android:name="com.mattercube.basicfragments.RETRIEVE_FONT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

@@ -47,7 +47,7 @@ class WelcomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        // Define Buttons by finding their views
+        // Assigning Buttons by finding their views
         style1 = view?.findViewById(R.id.button_style1)
         style2 = view?.findViewById(R.id.button_style2)
         style3 = view?.findViewById(R.id.button_style3)
